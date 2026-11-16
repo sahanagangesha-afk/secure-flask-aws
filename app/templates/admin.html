@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block content %}
+<div class="card stats"><div><b>{{ stats.total }}</b>Transactions</div><div><b>{{ stats.flagged }}</b>Flagged</div>
+<div><b>{{ stats.volume }}</b>Volume</div><div><b>{{ stats.failed_logins }}</b>Failed logins</div></div>
+<div class="card"><h3>Flagged transactions</h3><table><tr><th>ID</th><th>Account</th><th>Amount</th><th>Country</th><th>Risk</th><th>Reasons</th></tr>
+{% for t in flagged %}<tr><td>{{ t.id }}</td><td>{{ t.account }}</td><td>{{ t.amount }}</td><td>{{ t.country }}</td><td class="flag">{{ t.risk_score }}</td><td>{{ t.reasons }}</td></tr>{% endfor %}</table></div>
+<div class="card"><h3>Audit log (latest 50)</h3><table><tr><th>Time (UTC)</th><th>User</th><th>Action</th><th>IP</th><th>Detail</th></tr>
+{% for l in logs %}<tr><td>{{ l.created_at }}</td><td>{{ l.username }}</td><td>{{ l.action }}</td><td>{{ l.ip }}</td><td>{{ l.detail }}</td></tr>{% endfor %}</table></div>
+{% endblock %}

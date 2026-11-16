@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flask (local dev)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "flask",
+      "args": ["--app", "wsgi", "run", "--debug"],
+      "env": { "ADMIN_PASSWORD": "ChangeMe!123", "ENABLE_STRESS_ENDPOINT": "true" },
+      "jinja": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# cp terraform.tfvars.example terraform.tfvars  (terraform.tfvars is git-ignored)
+aws_region   = "ap-south-1"
+my_ip_cidr   = "203.0.113.10/32"   # curl ifconfig.me  -> append /32
+alert_email  = "you@example.com"
+repo_url     = "https://github.com/<your-user>/secure-flask-aws.git"
+# key_name   = "my-keypair"
+# enable_stress_endpoint = true     # only while demoing auto scaling
+# certificate_arn = "arn:aws:acm:..."  # enables HTTPS on the ALB
