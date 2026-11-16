@@ -1,8 +1,23 @@
-# Secure and Scalable Flask Deployment on AWS
+# Secure Banking Fraud Detection System
 
-A **Banking Fraud Detection System** (Flask) deployed the way a production service should be: private database, least-privilege IAM, locked-down networking, centralised logs and alarms, a load balancer with auto scaling, and a budget alert. Everything is reproducible with Terraform and a single bash script.
+A Python Flask-based banking fraud detection application designed with security, scalability, and cloud deployment in mind.
 
-> Add your own screenshots to `docs/screenshots/` and link them in the *Screenshots* section below.
+The system analyzes banking transactions using rule-based fraud detection and flags suspicious activities based on transaction amount and country. It includes secure user authentication, CSRF protection, login attempt lockout, role-based admin access, and audit logging.
+
+The project is designed for AWS deployment using Terraform, with infrastructure components including EC2, RDS MySQL, S3, IAM, Application Load Balancer, Auto Scaling, and CloudWatch.
+
+### Key Features
+- **Fraud Detection:** Rule-based analysis to identify suspicious banking transactions.
+- **Secure Authentication:** Password hashing, CSRF protection, and login lockout.
+- **Admin Dashboard:** Role-based administrative access and transaction monitoring.
+- **Audit Logging:** Tracks user activities and security events.
+- **Database Management:** SQL database integration with MySQL support.
+- **AWS Infrastructure:** Infrastructure provisioning using Terraform.
+- **Cloud Monitoring:** Centralized logging, CloudWatch metrics, and alarms.
+- **Automated Testing:** Pytest test suite and GitHub Actions CI workflow.
+
+### Technology Stack
+Python | Flask | MySQL | SQL | AWS EC2 | AWS RDS | AWS S3 | IAM | CloudWatch | Terraform | Git | GitHub Actions | Pytest
 
 ## Architecture
 
